@@ -6,8 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
             img: 'images/fries.png'
         },
         {
+            names: 'fries',
+            img: 'images/fries.png'
+        },
+        {
             name: 'hamburger',
             img: 'images/hamburger.png'
+        },
+        {
+            name: 'hamburger',
+            img: 'images/hamburger.png'
+        },
+        {
+            name: 'hotdog',
+            img: 'images/hotdog.png'
         },
         {
             name: 'hotdog',
@@ -18,8 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
             img: 'images/ice-cream.png'
         },
         {
+            name: 'ice-cream',
+            img: 'images/ice-cream.png'
+        },
+        {
             name: 'milkshake',
             img: 'images/milkshake.png'
+        },
+        {
+            name: 'milkshake',
+            img: 'images/milkshake.png'
+        },
+        {
+            name: 'pizza',
+            img: 'images/pizza.png'
         },
         {
             name: 'pizza',
@@ -30,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const grid = document.querySelector('.grid');
     const resultDisplay = document.querySelector('#result')
-    var cardChosen = []
-    var cardChosenId = []
+    var cardsChosen = []
+    var cardsChosenId = []
     const cardsWon = []
 
     // create your board
@@ -71,7 +95,7 @@ function checkForMatch() {
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
-    if (cardsWon.length === cardsArray.length/2) {
+    if (cardsWon.length === cardArray.length/2) {
         resultDisplay.textContent = 'Congratulations! You found them all!'
     }
 }
@@ -83,7 +107,7 @@ function flipCard() {
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenId.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
-    if (cardsChosen.length === 2) {
+    if (cardsChosen.length ===2) {
         setTimeout(checkForMatch, 500);
     }
 }
